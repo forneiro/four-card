@@ -1,0 +1,110 @@
+// ## Colors
+
+// ### Primary
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+// ### Neutral
+$VeryDarkBlue: hsl(234, 12%, 34%);
+$GrayishBlue: hsl(229, 6%, 66%);
+$VeryLightGray: hsl(0, 0%, 98%);
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+  margin: 0;
+}
+body {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  margin: 10rem auto 6rem;
+  padding: 0 3rem;
+}
+h1,
+h2 {
+  font-weight: 600;
+}
+h1,
+h2,
+span {
+  color: $VeryDarkBlue;
+}
+p {
+  color: $GrayishBlue;
+}
+// USEFUL
+.bg-cyan {
+  border-top: 0.4rem solid $Cyan;
+}
+.bg-red {
+  border-top: 0.4rem solid $Red;
+}
+.bg-orange {
+  border-top: 0.4rem solid $Orange;
+}
+.bg-blue {
+  border-top: 0.4rem solid $Blue;
+}
+// CARD
+.header {
+  text-align: center;
+  margin: 0 auto 6rem;
+  max-width: 37rem;
+  h1,
+  span {
+    font-size: 2.7rem;
+  }
+  h1 {
+    margin-bottom: 1.8rem;
+  }
+  span {
+    font-weight: 200;
+  }
+  p {
+    letter-spacing: 0.1rem;
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  article {
+    border-radius: 0.6rem;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    box-shadow: $VeryDarkBlue 0 0.8rem 2.8rem -2rem;
+    max-width: 37rem;
+  }
+  h2 {
+    margin-bottom: 1rem;
+  }
+  .img-container {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+// Desktop Version
+@media (min-width: 769px) {
+  .header {
+    max-width: 58rem;
+    h1,
+    span {
+      font-size: 3.8rem;
+    }
+  }
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+    article {
+      flex: 1 1 33.3%;
+    }
+  }
+}
